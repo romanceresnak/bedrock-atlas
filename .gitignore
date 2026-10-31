@@ -1,0 +1,24 @@
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+*.auto.tfvars
+terraform.tfvars
+.terraform.lock.hcl.bak
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Node
+node_modules/
+dist/
+
+# Local data (raw logs may contain prompts/responses — never commit)
+data/raw/
+data/private/
+.env
+.DS_Store

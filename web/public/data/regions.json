@@ -1,19 +1,4 @@
 {
- "eu-central-1": {
-  "name": "Frankfurt",
-  "lon": 8.68,
-  "lat": 50.11
- },
- "eu-north-1": {
-  "name": "Stockholm",
-  "lon": 18.07,
-  "lat": 59.33
- },
- "eu-west-1": {
-  "name": "Ireland",
-  "lon": -6.26,
-  "lat": 53.35
- },
  "us-east-1": {
   "name": "N. Virginia",
   "lon": -77.45,
@@ -24,9 +9,159 @@
   "lon": -83.0,
   "lat": 39.96
  },
+ "us-west-1": {
+  "name": "N. California",
+  "lon": -122.42,
+  "lat": 37.77
+ },
  "us-west-2": {
   "name": "Oregon",
   "lon": -122.68,
   "lat": 45.52
+ },
+ "ca-central-1": {
+  "name": "Montreal",
+  "lon": -73.57,
+  "lat": 45.5
+ },
+ "ca-west-1": {
+  "name": "Calgary",
+  "lon": -114.07,
+  "lat": 51.05
+ },
+ "mx-central-1": {
+  "name": "Mexico",
+  "lon": -100.39,
+  "lat": 20.59
+ },
+ "sa-east-1": {
+  "name": "São Paulo",
+  "lon": -46.63,
+  "lat": -23.55
+ },
+ "eu-west-1": {
+  "name": "Ireland",
+  "lon": -6.26,
+  "lat": 53.35
+ },
+ "eu-west-2": {
+  "name": "London",
+  "lon": -0.13,
+  "lat": 51.51
+ },
+ "eu-west-3": {
+  "name": "Paris",
+  "lon": 2.35,
+  "lat": 48.86
+ },
+ "eu-central-1": {
+  "name": "Frankfurt",
+  "lon": 8.68,
+  "lat": 50.11
+ },
+ "eu-central-2": {
+  "name": "Zurich",
+  "lon": 8.54,
+  "lat": 47.37
+ },
+ "eu-north-1": {
+  "name": "Stockholm",
+  "lon": 18.07,
+  "lat": 59.33
+ },
+ "eu-south-1": {
+  "name": "Milan",
+  "lon": 9.19,
+  "lat": 45.46
+ },
+ "eu-south-2": {
+  "name": "Spain",
+  "lon": -0.88,
+  "lat": 41.65
+ },
+ "il-central-1": {
+  "name": "Tel Aviv",
+  "lon": 34.78,
+  "lat": 32.08
+ },
+ "me-central-1": {
+  "name": "UAE",
+  "lon": 55.27,
+  "lat": 25.2
+ },
+ "me-south-1": {
+  "name": "Bahrain",
+  "lon": 50.56,
+  "lat": 26.07
+ },
+ "af-south-1": {
+  "name": "Cape Town",
+  "lon": 18.42,
+  "lat": -33.92
+ },
+ "ap-south-1": {
+  "name": "Mumbai",
+  "lon": 72.88,
+  "lat": 19.08
+ },
+ "ap-south-2": {
+  "name": "Hyderabad",
+  "lon": 78.49,
+  "lat": 17.39
+ },
+ "ap-southeast-1": {
+  "name": "Singapore",
+  "lon": 103.82,
+  "lat": 1.35
+ },
+ "ap-southeast-2": {
+  "name": "Sydney",
+  "lon": 151.21,
+  "lat": -33.87
+ },
+ "ap-southeast-3": {
+  "name": "Jakarta",
+  "lon": 106.85,
+  "lat": -6.2
+ },
+ "ap-southeast-4": {
+  "name": "Melbourne",
+  "lon": 144.96,
+  "lat": -37.81
+ },
+ "ap-southeast-5": {
+  "name": "Malaysia",
+  "lon": 101.69,
+  "lat": 3.14
+ },
+ "ap-southeast-7": {
+  "name": "Thailand",
+  "lon": 100.5,
+  "lat": 13.76
+ },
+ "ap-northeast-1": {
+  "name": "Tokyo",
+  "lon": 139.69,
+  "lat": 35.68
+ },
+ "ap-northeast-2": {
+  "name": "Seoul",
+  "lon": 126.98,
+  "lat": 37.57
+ },
+ "ap-northeast-3": {
+  "name": "Osaka",
+  "lon": 135.5,
+  "lat": 34.69
+ },
+ "ap-east-1": {
+  "name": "Hong Kong",
+  "lon": 114.17,
+  "lat": 22.32
+ },
+ "ap-east-2": {
+  "name": "Taipei",
+  "lon": 121.56,
+  "lat": 25.03
  }
 }

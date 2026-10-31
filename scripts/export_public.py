@@ -2,7 +2,7 @@
 
 Input:  data/private/records.jsonl (from normalize.py)
 Output: web/public/data/requests.json   allow-listed fields only
-        web/public/data/regions.json    approximate region points
+        web/public/data/regions.json    approximate points of all known regions
         web/public/data/meta.json       collection date, coverage, limitations
 
 Identities are published as "<team>/session-N" (numbered by first appearance).
@@ -74,9 +74,10 @@ def main():
 
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "requests.json").write_text(json.dumps(public, indent=1) + "\n")
-    (OUT / "regions.json").write_text(json.dumps({k: region_points[k] for k in sorted(used)}, indent=1) + "\n")
+    # All known regions: live demo requests may be processed in regions outside the dataset.
+    (OUT / "regions.json").write_text(json.dumps(region_points, indent=1, ensure_ascii=False) + "\n")
     (OUT / "meta.json").write_text(json.dumps(meta, indent=1) + "\n")
-    print(f"{len(public)} requests, {len(used)} regions -> {OUT.relative_to(ROOT)}")
+    print(f"{len(public)} requests, {len(used)} regions used -> {OUT.relative_to(ROOT)}")
     print("identities:", sorted(set(sessions.values())))
 
 

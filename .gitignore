@@ -22,3 +22,5 @@ data/raw/
 data/private/
 .env
 .DS_Store
+*.local
+Claude outputs/

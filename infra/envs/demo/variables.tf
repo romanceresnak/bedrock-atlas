@@ -16,3 +16,14 @@ variable "model_ids" {
     "amazon.nova-lite-v1:0",
   ]
 }
+
+variable "map_allowed_referers" {
+  description = "Extra referers allowed to use the map API key (the CloudFront URL is added automatically)."
+  type        = list(string)
+  default     = ["http://localhost:5173/*"]
+}
+
+variable "budget_email" {
+  description = "Address for budget alerts (set in terraform.tfvars, which is gitignored)."
+  type        = string
+}

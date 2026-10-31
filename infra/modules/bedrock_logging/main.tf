@@ -63,6 +63,55 @@ resource "aws_s3_bucket_policy" "logs" {
   policy = data.aws_iam_policy_document.bedrock_write.json
 }
 
+# CloudWatch Logs copy of the same invocation logs: arrives in seconds, which
+# the live demo needs to show the processing region of a fresh request.
+resource "aws_cloudwatch_log_group" "invocations" {
+  region            = var.region
+  name              = "/bedrock-atlas/invocations"
+  retention_in_days = 7
+}
+
+data "aws_iam_policy_document" "bedrock_assume" {
+  statement {
+    actions = ["sts:AssumeRole"]
+
+    principals {
+      type        = "Service"
+      identifiers = ["bedrock.amazonaws.com"]
+    }
+
+    condition {
+      test     = "StringEquals"
+      variable = "aws:SourceAccount"
+      values   = [local.account_id]
+    }
+
+    condition {
+      test     = "ArnLike"
+      variable = "aws:SourceArn"
+      values   = ["arn:${local.partition}:bedrock:${var.region}:${local.account_id}:*"]
+    }
+  }
+}
+
+resource "aws_iam_role" "cloudwatch" {
+  name               = "bedrock-atlas-invocation-logs-${var.region}"
+  assume_role_policy = data.aws_iam_policy_document.bedrock_assume.json
+}
+
+resource "aws_iam_role_policy" "cloudwatch" {
+  name = "write-invocation-logs"
+  role = aws_iam_role.cloudwatch.id
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [{
+      Effect   = "Allow"
+      Action   = ["logs:CreateLogStream", "logs:PutLogEvents"]
+      Resource = "${aws_cloudwatch_log_group.invocations.arn}:log-stream:*"
+    }]
+  })
+}
+
 resource "aws_bedrock_model_invocation_logging_configuration" "this" {
   region = var.region
 
@@ -76,8 +125,13 @@ resource "aws_bedrock_model_invocation_logging_configuration" "this" {
       bucket_name = aws_s3_bucket.logs.id
       key_prefix  = "invocations"
     }
+
+    cloudwatch_config {
+      log_group_name = aws_cloudwatch_log_group.invocations.name
+      role_arn       = aws_iam_role.cloudwatch.arn
+    }
   }
 
   # Bedrock validates write access when the configuration is saved.
-  depends_on = [aws_s3_bucket_policy.logs]
+  depends_on = [aws_s3_bucket_policy.logs, aws_iam_role_policy.cloudwatch]
 }

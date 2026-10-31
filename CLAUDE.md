@@ -75,6 +75,7 @@ Author: Roman Ceresnak. Commits are authored by Roman only — no AI co-author t
 - Models: Claude Haiku 4.5 and Amazon Nova Lite — direct and cross-region calls where available.
 - Three IAM roles = three demo teams. Team mapping is a managed table, never derived from client metadata.
 - Dataset generation hard cap: USD 25 estimated inference cost.
+- Live demo for the jury: fixed prompt, fixed routes, 500 calls/UTC day site-wide, processing region via CloudWatch Logs subscription (`observed`).
 - Terraform: modular (`infra/modules/*`), one root (`infra/envs/demo`), S3 backend with native lockfile (`use_lockfile`), bootstrap root creates the state bucket.
 
 ### Rules

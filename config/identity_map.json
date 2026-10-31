@@ -3,6 +3,7 @@
   "roles": {
     "bedrock-atlas-team-research": "research",
     "bedrock-atlas-team-support": "support",
-    "bedrock-atlas-team-marketing": "marketing"
+    "bedrock-atlas-team-marketing": "marketing",
+    "bedrock-atlas-live-api": "live-demo"
   }
 }

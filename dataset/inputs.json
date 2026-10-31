@@ -1,0 +1,50 @@
+{
+  "about": "Synthetic, non-sensitive texts written for the Bedrock Atlas benchmark. No customer or personal data.",
+  "workloads": {
+    "classify": {
+      "team": "support",
+      "labels": ["billing", "technical", "account", "shipping"],
+      "prompt": "Classify the support ticket into exactly one label: billing, technical, account, shipping. Answer with the label only.\n\nTicket: {text}",
+      "items": [
+        {"id": "c1", "text": "I was charged twice for my March subscription. Please refund one payment.", "expected": "billing"},
+        {"id": "c2", "text": "The mobile app crashes every time I open the settings screen on Android 15.", "expected": "technical"},
+        {"id": "c3", "text": "I can't log in because the password reset email never arrives.", "expected": "account"},
+        {"id": "c4", "text": "My order was marked as delivered but the parcel is not at my door.", "expected": "shipping"},
+        {"id": "c5", "text": "Why does my invoice show VAT when I entered a valid company tax ID?", "expected": "billing"},
+        {"id": "c6", "text": "Exports to CSV time out after 30 seconds for reports larger than 10 MB.", "expected": "technical"},
+        {"id": "c7", "text": "Please change the email address on my profile to my new work address.", "expected": "account"},
+        {"id": "c8", "text": "Can you ship to Iceland? The checkout says the country is not supported.", "expected": "shipping"}
+      ]
+    },
+    "extract": {
+      "team": "marketing",
+      "fields": ["product", "price", "currency", "color"],
+      "prompt": "Extract product, price (number), currency (ISO code) and color from the text. Answer with JSON only, keys: product, price, currency, color.\n\nText: {text}",
+      "items": [
+        {"id": "e1", "text": "Meet the Aurora desk lamp in matte black, now only 49.90 EUR.", "expected": {"product": "Aurora desk lamp", "price": 49.9, "currency": "EUR", "color": "matte black"}},
+        {"id": "e2", "text": "Our TrailMax backpack comes in forest green and costs $129.", "expected": {"product": "TrailMax backpack", "price": 129, "currency": "USD", "color": "forest green"}},
+        {"id": "e3", "text": "Limited offer: the white Nimbus wireless earbuds for 79 GBP.", "expected": {"product": "Nimbus wireless earbuds", "price": 79, "currency": "GBP", "color": "white"}},
+        {"id": "e4", "text": "The Orbit smart watch, ocean blue edition, retails at 299 EUR.", "expected": {"product": "Orbit smart watch", "price": 299, "currency": "EUR", "color": "ocean blue"}},
+        {"id": "e5", "text": "Grab a red Ember kettle today - just 35 USD while stocks last.", "expected": {"product": "Ember kettle", "price": 35, "currency": "USD", "color": "red"}},
+        {"id": "e6", "text": "Silver finish, 14-inch screen: the Vertex laptop stand is 59.99 EUR.", "expected": {"product": "Vertex laptop stand", "price": 59.99, "currency": "EUR", "color": "silver"}},
+        {"id": "e7", "text": "Yellow is back! The Sunny raincoat sells for 89 CHF.", "expected": {"product": "Sunny raincoat", "price": 89, "currency": "CHF", "color": "yellow"}},
+        {"id": "e8", "text": "The grey Pebble power bank now costs 24.50 GBP.", "expected": {"product": "Pebble power bank", "price": 24.5, "currency": "GBP", "color": "grey"}}
+      ]
+    },
+    "summarize": {
+      "team": "research",
+      "prompt": "Summarize the text in one sentence.\n\nText: {text}",
+      "prompt_detailed": "Write a detailed analysis of the text: background, key points, implications and open questions.\n\nText: {text}",
+      "items": [
+        {"id": "s1", "text": "A city council approved a pilot that replaces diesel buses on three routes with battery-electric buses. The pilot runs for 18 months and will measure energy cost, maintenance and passenger satisfaction before a decision on the full fleet."},
+        {"id": "s2", "text": "Researchers compared four irrigation schedules for tomato greenhouses. Watering at night reduced water use by 12 percent without lowering yield, while reducing frequency below once a day hurt fruit size."},
+        {"id": "s3", "text": "A regional library introduced self-service lockers for book pickup. Within two months, 40 percent of reservations were collected from lockers, mostly outside staffed opening hours."},
+        {"id": "s4", "text": "A software team moved its nightly test suite from one large server to many small parallel workers. Total runtime dropped from four hours to 35 minutes, but flaky tests became more visible."},
+        {"id": "s5", "text": "A bakery chain tested printing best-before times instead of dates on bread bags. Food waste fell in stores that also discounted bread in the last two hours before closing."},
+        {"id": "s6", "text": "A university replaced paper lab notebooks with a shared digital notebook. Students found experiments easier to reproduce, while supervisors asked for better version history."},
+        {"id": "s7", "text": "A ferry operator added real-time crowding information to its app. Travellers shifted to less busy departures, which reduced boarding delays at peak times."},
+        {"id": "s8", "text": "A hospital cafeteria redesigned its menu board to show plant-based dishes first. Sales of those dishes rose, while total cafeteria revenue stayed the same."}
+      ]
+    }
+  }
+}

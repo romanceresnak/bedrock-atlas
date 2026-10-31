@@ -79,6 +79,11 @@ Author: Roman Ceresnak. Commits are authored by Roman only — no AI co-author t
 
 ### Rules
 - Processing region comes from CloudTrail `additionalEventData.inferenceRegion`. Price comes from the **source** region of the call, never the map destination.
+- Processing-region evidence levels (shown in UI):
+  - `verified` — invocation log and CloudTrail agree on `inferenceRegion` (joined by `requestId` / `parentRequestId`).
+  - `observed` — only one of the two sources has `inferenceRegion` so far.
+  - `direct` — call without an inference profile; processing region = source region (documented on-demand behavior), labeled "direct invocation (same region)", visually distinct from verified.
+  - `unknown` — none of the above.
 - Missing data is shown as `Unknown`; unsupported billing modes as `Unpriced` — never zero, never guessed.
 - UI label: "Estimated inference cost". v1 supports on-demand text tokens without caching only.
 - Map lines are logical region relationships, not network paths; region points are approximate.

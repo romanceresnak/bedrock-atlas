@@ -24,3 +24,4 @@ data/private/
 .DS_Store
 *.local
 Claude outputs/
+CLAUDE.md

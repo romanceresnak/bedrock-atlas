@@ -2,8 +2,6 @@
 
 A map of who spends money on Amazon Bedrock, where requests were actually processed, and which savings are safe.
 
-**Live demo:** https://d3j8ziqf10u5el.cloudfront.net
-
 > You call AI from Frankfurt. Where was the request actually processed, who pays for it, and is there a better option?
 
 ![Bedrock Atlas](docs/screenshot.png)
@@ -22,7 +20,7 @@ All numbers come from real Bedrock calls in a controlled test workload (see [Dat
 
 ## 60-second tour
 
-1. Open the live demo. The headline is computed from the data.
+1. Open the demo (link in the hackathon submission). The headline is computed from the data.
 2. Click the **Frankfurt → Ohio** line, then any request: **Follow the request** shows identity (anonymized), team, source → processing region, evidence level, tokens, measured duration and estimated cost, each with its source.
 3. Click **Frankfurt** or **Ohio**: what was billed there vs. what was processed there.
 4. Press ▶ on the timeline and filter to team **research** to watch the spike.

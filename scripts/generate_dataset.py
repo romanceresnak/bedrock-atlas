@@ -22,6 +22,8 @@ import boto3
 from botocore.config import Config
 from botocore.exceptions import ClientError
 
+from benchmark import score
+
 ROOT = Path(__file__).resolve().parent.parent
 INPUTS = ROOT / "dataset" / "inputs.json"
 MANIFEST = ROOT / "data" / "private" / "manifest.jsonl"
@@ -68,25 +70,6 @@ def team_session(account, team, session_name):
         aws_secret_access_key=creds["SecretAccessKey"],
         aws_session_token=creds["SessionToken"],
     )
-
-
-def score(workload, item, answer):
-    """1/0 for workloads with a known answer, None where we do not score."""
-    if workload == "classify":
-        return int(answer.strip().lower().strip(".") == item["expected"])
-    if workload == "extract":
-        try:
-            got = json.loads(answer.strip().removeprefix("```json").removesuffix("```"))
-        except json.JSONDecodeError:
-            return 0
-        exp = item["expected"]
-        return int(
-            str(got.get("product", "")).lower() == exp["product"].lower()
-            and float(got.get("price", -1)) == exp["price"]
-            and str(got.get("currency", "")).upper() == exp["currency"]
-            and str(got.get("color", "")).lower() == exp["color"]
-        )
-    return None
 
 
 def main():

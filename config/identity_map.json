@@ -1,0 +1,8 @@
+{
+  "about": "Managed identity mapping: IAM role name -> team. Client-sent requestMetadata is never used to decide the team.",
+  "roles": {
+    "bedrock-atlas-team-research": "research",
+    "bedrock-atlas-team-support": "support",
+    "bedrock-atlas-team-marketing": "marketing"
+  }
+}

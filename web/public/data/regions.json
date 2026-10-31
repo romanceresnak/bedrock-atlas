@@ -1,0 +1,32 @@
+{
+ "eu-central-1": {
+  "name": "Frankfurt",
+  "lon": 8.68,
+  "lat": 50.11
+ },
+ "eu-north-1": {
+  "name": "Stockholm",
+  "lon": 18.07,
+  "lat": 59.33
+ },
+ "eu-west-1": {
+  "name": "Ireland",
+  "lon": -6.26,
+  "lat": 53.35
+ },
+ "us-east-1": {
+  "name": "N. Virginia",
+  "lon": -77.45,
+  "lat": 38.95
+ },
+ "us-east-2": {
+  "name": "Ohio",
+  "lon": -83.0,
+  "lat": 39.96
+ },
+ "us-west-2": {
+  "name": "Oregon",
+  "lon": -122.68,
+  "lat": 45.52
+ }
+}

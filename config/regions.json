@@ -1,0 +1,13 @@
+{
+  "about": "Approximate points representing AWS Regions (metro area), not data center locations.",
+  "regions": {
+    "eu-central-1": {"name": "Frankfurt", "lon": 8.68, "lat": 50.11},
+    "eu-west-1": {"name": "Ireland", "lon": -6.26, "lat": 53.35},
+    "eu-west-3": {"name": "Paris", "lon": 2.35, "lat": 48.86},
+    "eu-north-1": {"name": "Stockholm", "lon": 18.07, "lat": 59.33},
+    "eu-south-1": {"name": "Milan", "lon": 9.19, "lat": 45.46},
+    "us-east-1": {"name": "N. Virginia", "lon": -77.45, "lat": 38.95},
+    "us-east-2": {"name": "Ohio", "lon": -83.0, "lat": 39.96},
+    "us-west-2": {"name": "Oregon", "lon": -122.68, "lat": 45.52}
+  }
+}

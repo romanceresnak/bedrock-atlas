@@ -1,0 +1,215 @@
+{
+  "scope": "on-demand text tokens, no cache, no batch",
+  "prices": [
+    {
+      "base_model": "amazon.nova-lite-v1:0",
+      "source_region": "eu-central-1",
+      "inference_mode": "geo",
+      "currency": "USD",
+      "unit": "per 1M tokens",
+      "token_categories": [
+        "input",
+        "output"
+      ],
+      "source": "AWS Price List API",
+      "service_code": "AmazonBedrock",
+      "usage_types": [
+        "EUC1-NovaLite-output-tokens",
+        "EUC1-NovaLite-input-tokens"
+      ],
+      "effective_date": "2026-10-01",
+      "retrieved_at": "2026-10-31",
+      "output_price": 0.312,
+      "input_price": 0.078
+    },
+    {
+      "base_model": "amazon.nova-lite-v1:0",
+      "source_region": "eu-central-1",
+      "inference_mode": "in_region",
+      "currency": "USD",
+      "unit": "per 1M tokens",
+      "token_categories": [
+        "input",
+        "output"
+      ],
+      "source": "AWS Price List API",
+      "service_code": "AmazonBedrock",
+      "usage_types": [
+        "EUC1-NovaLite-output-tokens",
+        "EUC1-NovaLite-input-tokens"
+      ],
+      "effective_date": "2026-10-01",
+      "retrieved_at": "2026-10-31",
+      "output_price": 0.312,
+      "input_price": 0.078
+    },
+    {
+      "base_model": "amazon.nova-lite-v1:0",
+      "source_region": "us-east-1",
+      "inference_mode": "geo",
+      "currency": "USD",
+      "unit": "per 1M tokens",
+      "token_categories": [
+        "input",
+        "output"
+      ],
+      "source": "AWS Price List API",
+      "service_code": "AmazonBedrock",
+      "usage_types": [
+        "USE1-NovaLite-output-tokens",
+        "USE1-NovaLite-input-tokens"
+      ],
+      "effective_date": "2026-10-01",
+      "retrieved_at": "2026-10-31",
+      "output_price": 0.24,
+      "input_price": 0.06
+    },
+    {
+      "base_model": "amazon.nova-lite-v1:0",
+      "source_region": "us-east-1",
+      "inference_mode": "in_region",
+      "currency": "USD",
+      "unit": "per 1M tokens",
+      "token_categories": [
+        "input",
+        "output"
+      ],
+      "source": "AWS Price List API",
+      "service_code": "AmazonBedrock",
+      "usage_types": [
+        "USE1-NovaLite-output-tokens",
+        "USE1-NovaLite-input-tokens"
+      ],
+      "effective_date": "2026-10-01",
+      "retrieved_at": "2026-10-31",
+      "output_price": 0.24,
+      "input_price": 0.06
+    },
+    {
+      "base_model": "anthropic.claude-haiku-4-5-20251001-v1:0",
+      "source_region": "eu-central-1",
+      "inference_mode": "geo",
+      "currency": "USD",
+      "unit": "per 1M tokens",
+      "token_categories": [
+        "input",
+        "output"
+      ],
+      "source": "AWS Price List API",
+      "service_code": "AmazonBedrockFoundationModels",
+      "usage_types": [
+        "EUC1-MP:EUC1_InputTokenCount-Units",
+        "EUC1-MP:EUC1_OutputTokenCount-Units"
+      ],
+      "effective_date": "2026-09-01",
+      "retrieved_at": "2026-10-31",
+      "input_price": 1.1,
+      "output_price": 5.5
+    },
+    {
+      "base_model": "anthropic.claude-haiku-4-5-20251001-v1:0",
+      "source_region": "eu-central-1",
+      "inference_mode": "global",
+      "currency": "USD",
+      "unit": "per 1M tokens",
+      "token_categories": [
+        "input",
+        "output"
+      ],
+      "source": "AWS Price List API",
+      "service_code": "AmazonBedrockFoundationModels",
+      "usage_types": [
+        "EUC1-MP:EUC1_InputTokenCount_Global-Units",
+        "EUC1-MP:EUC1_OutputTokenCount_Global-Units"
+      ],
+      "effective_date": "2026-09-01",
+      "retrieved_at": "2026-10-31",
+      "input_price": 1.0,
+      "output_price": 5.0
+    },
+    {
+      "base_model": "anthropic.claude-haiku-4-5-20251001-v1:0",
+      "source_region": "eu-central-1",
+      "inference_mode": "in_region",
+      "currency": "USD",
+      "unit": "per 1M tokens",
+      "token_categories": [
+        "input",
+        "output"
+      ],
+      "source": "AWS Price List API",
+      "service_code": "AmazonBedrockFoundationModels",
+      "usage_types": [
+        "EUC1-MP:EUC1_InputTokenCount-Units",
+        "EUC1-MP:EUC1_OutputTokenCount-Units"
+      ],
+      "effective_date": "2026-09-01",
+      "retrieved_at": "2026-10-31",
+      "input_price": 1.1,
+      "output_price": 5.5
+    },
+    {
+      "base_model": "anthropic.claude-haiku-4-5-20251001-v1:0",
+      "source_region": "us-east-1",
+      "inference_mode": "geo",
+      "currency": "USD",
+      "unit": "per 1M tokens",
+      "token_categories": [
+        "input",
+        "output"
+      ],
+      "source": "AWS Price List API",
+      "service_code": "AmazonBedrockFoundationModels",
+      "usage_types": [
+        "USE1-MP:USE1_InputTokenCount-Units",
+        "USE1-MP:USE1_OutputTokenCount-Units"
+      ],
+      "effective_date": "2026-09-01",
+      "retrieved_at": "2026-10-31",
+      "input_price": 1.1,
+      "output_price": 5.5
+    },
+    {
+      "base_model": "anthropic.claude-haiku-4-5-20251001-v1:0",
+      "source_region": "us-east-1",
+      "inference_mode": "global",
+      "currency": "USD",
+      "unit": "per 1M tokens",
+      "token_categories": [
+        "input",
+        "output"
+      ],
+      "source": "AWS Price List API",
+      "service_code": "AmazonBedrockFoundationModels",
+      "usage_types": [
+        "USE1-MP:USE1_InputTokenCount_Global-Units",
+        "USE1-MP:USE1_OutputTokenCount_Global-Units"
+      ],
+      "effective_date": "2026-09-01",
+      "retrieved_at": "2026-10-31",
+      "input_price": 1.0,
+      "output_price": 5.0
+    },
+    {
+      "base_model": "anthropic.claude-haiku-4-5-20251001-v1:0",
+      "source_region": "us-east-1",
+      "inference_mode": "in_region",
+      "currency": "USD",
+      "unit": "per 1M tokens",
+      "token_categories": [
+        "input",
+        "output"
+      ],
+      "source": "AWS Price List API",
+      "service_code": "AmazonBedrockFoundationModels",
+      "usage_types": [
+        "USE1-MP:USE1_InputTokenCount-Units",
+        "USE1-MP:USE1_OutputTokenCount-Units"
+      ],
+      "effective_date": "2026-09-01",
+      "retrieved_at": "2026-10-31",
+      "input_price": 1.1,
+      "output_price": 5.5
+    }
+  ]
+}
